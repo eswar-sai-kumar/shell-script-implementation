@@ -2,7 +2,7 @@
 DIR=${1:-.}
 mkdir -p "$DIR/Documents" "$DIR/Images" "$DIR/Videos" "$DIR/Music" "$DIR/Archieves" "$DIR/Others"
 for file in "$DIR"/*; do
-    if[[-f "$file" ]]; then
+    if [[-f "$file"]]; then
         case "${file##*.}" in
           txt|pdf|doc|docx|xls|xlsx|ppt|pptx) mv "$file" "$DIR/Documents/";;
           jpg|jpeg|png|gif|bmp|svg|tiff|webp) mv "$file" "$DIR/Images/" ;;
