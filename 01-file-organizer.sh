@@ -14,7 +14,5 @@ for file in "$DIR"/*; do
         esac
     fi
 done
-
-
 #created some files (touch a.txt a.jpg a.mp4 a.mp3)
 #executed script (sh 01-file-organizer.sh) 
