@@ -4,6 +4,7 @@ mkdir -p "$DIR/Documents" "$DIR/Images" "$DIR/Videos" "$DIR/Music" "$DIR/Archiev
 for file in "$DIR"/*; do
     if [[ -f "$file" ]]; then
         case "${file##*.}" in
+          sh) continue;;
           txt|pdf|doc|docx|xls|xlsx|ppt|pptx) mv "$file" "$DIR/Documents/";;
           jpg|jpeg|png|gif|bmp|svg|tiff|webp) mv "$file" "$DIR/Images/" ;;
           mp4|mkv|flv|avi|mov|wmv) mv "$file" "$DIR/Videos/" ;;
